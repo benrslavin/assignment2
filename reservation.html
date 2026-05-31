@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Reserve</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Reservation Page">
+  <meta name="keywords" content="Reserve, Book, Schedule">
+  <meta name="author" content="Ben Slavin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="design/css/style.css" rel="stylesheet" type="text/css">
+  <link href="design/css/mobile.css" rel="stylesheet" type="text/css">
+  <link href="design/css/tablet.css" rel="stylesheet" type="text/css">
+  <link href="design/css/desktop.css" rel="stylesheet" type="text/css">
+
+  <script src="design/js/jquery-1.9.1.min.js"></script>
+  <script src="design/js/script.js"></script>
+  <script>
+    $(function () {
+      $("#nav").load("Section/nav.html");
+      $("#footer").load("Section/footer.html");
+    });
+  </script>
+</head>
+
+<body id="page_reserve">
+  <header id="nav"></header>
+  <main>
+    <h1>Make a Reservation</h1>
+    <form id="survey" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+      <!--Form Full Name-->
+      <label for="reserve_name">Full name:</label>
+      <input type="text" id="reserve_name" name="reserve_name">
+
+      <!--Form Email-->
+      <label for="reserve_email">Email Address:</label>
+      <input type="text" id="reserve_email" name="reserve_email">
+
+      <!--Form Phone Number-->
+      <label for="reserve_phone">Phone Number:</label>
+      <input type="text" id="reserve_phone" name="reserve_phone">
+
+      <!--Form Restaurant Selection, Restaurant Options with deposit amount will be created in script.js -->
+      <label for="reserve_restaurant">Select Restaurant:</label>
+      <select id="reserve_restaurant" name="reserve_restaurant"></select>
+
+      <!--Form Date-->
+      <label for="reserve_date">Date:</label>
+      <input type="date" id="reserve_date" name="reserve_date">
+
+      <!--Form Time-->
+      <label for="reserve_time">Time:</label>
+      <input type="time" id="reserve_time" name="reserve_time">
+
+        <!--Form Number of Guests-->
+      <label for="reserve_guests">Number of Guests:</label>
+      <input type="number" id="reserve_guests" name="reserve_guests" min="1" max="20">
+
+      <!--Form Special Requests-->
+      <label for="reserve_request">Special Requests:(Optional)</label>
+      <textarea id="reserve_request" name="reserve_request" rows="4" cols="50"></textarea>
+
+      <!--Form Deposit Amount, Calculated based on selection of restaurant within script.js -->
+      <label>Deposit Amount:</label>
+      <span id="reserve_deposit_amount"></span>
+
+
+      <!--Form Deposit Method-->
+      <label for="reserve_deposit_method">Deposit Method:</label>
+      <select id="reserve_deposit_method" name="reserve_deposit_method">
+        <option value="">Select a Deposit Method</option>
+        <option value="reserve_deposit_voucher">Voucher</option>
+        <option value="reserve_deposit_credit">Credit Card</option>
+      </select>
+      
+      <!--Form Voucher Code, Only appears once Deposit Method is selected -->
+      <div id="voucher_box" style="display:none;">
+        <label for="reserve_deposit_voucher_code">Voucher Code:</label>
+        <input type="text" id="reserve_deposit_voucher_code" name="reserve_deposit_voucher_code">
+      </div>
+
+      <!--Form Credit Card Number, Only appears once Deposit Method is selected -->
+      <div id="credit_box" style="display:none;">
+        <label for="reserve_deposit_credit_code">Credit Card Number:</label>
+        <input type="text" id="reserve_deposit_credit_code" name="reserve_deposit_credit_code">
+      </div>  
+      <!--Form Billing Email  -->
+      <div id="billing_email_box">
+        <label for="reserve_billing_email">Billing Email:</label>
+        <input type="text" id="reserve_billing_email" name="reserve_billing_email">
+      </div>
+
+      <label>
+        <input type="checkbox" id="reserve_billing_email_same_as" name="reserve_billing_email_same_as"> Billing Email Same as Reservation Email
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <footer id="footer"></footer>
+</body>
+</html>

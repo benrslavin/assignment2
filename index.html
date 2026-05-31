@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home Page">
+    <meta name="keywords" content="Home">
+    <meta name="author" content="Ben Slavin">
+
+    <link href="design/css/style.css" rel="stylesheet" type="text/css">
+    <link href="design/css/mobile.css" rel="stylesheet" type="text/css">
+    <link href="design/css/tablet.css" rel="stylesheet" type="text/css">
+    <link href="design/css/desktop.css" rel="stylesheet" type="text/css">
+    
+    <script src="design/js/jquery-1.9.1.min.js"></script>
+    <script src="design/js/script.js"></script>
+
+    <!-- Loads header and footer into elements -->
+    <script>
+      $(function () {
+        $("#nav").load("Section/nav.html");  
+        $("#footer").load("Section/footer.html"); 
+      });
+    </script>
+  </head>
+
+  <body id="page_home">
+
+    <header id="nav"></header>
+
+    <main>
+      <img src="design/images/streetview_index.jpg" alt="Streetview of Carlton Beer Garden">
+      <p>[1] Alex_Svenson, “Pub Village Traditional Brown - Free photo on Pixabay,” Pixabay.com, Sep. 08, 2016.</p>
+
+      <h1>YOUR HOME GROUND FOR A GREAT TIME</h1>
+      <h2>Larger on the Valley is a chain of restaurants where family and friends can gather to enjoy delicious food and create lasting memories.</h2>
+      <h3>Come to watch your teams on the big screen! Each location includes Private Booths and Beer Garden with Triva Night on Fridays or Saturdays (Subject to Locations).</h3>
+
+      <section>
+        <h2>Plan a visit</h2>
+        <p>Check out our Locations for your next visit or make a booking to secure a good night out!</p>
+        <a href="restaurants.html" class="button">View Restaurants</a>
+        <a href="reservation.html" class="button">Book Now</a>
+
+        <p>If you have any requirements for your visit (Dietary Requirements, Budget, etc.), Click the link below to tailor your experience to the restaurant we recommend!</p>
+        <a href="recommend.html" class="button">Get Recommendations</a>
+
+        <p>Sign Up for an Account to save your preferences, receive updates on Special Events and Promotions!</p>
+        <a href="register.html" class="button">Sign Up</a>
+      </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+  </body>
+</html>

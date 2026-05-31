@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Recommendations</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Recommended Locations Page">
+  <meta name="keywords" content="Locations, Recommended, Places">
+  <meta name="author" content="Ben Slavin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="design/css/style.css" rel="stylesheet" type="text/css">
+  <link href="design/css/mobile.css" rel="stylesheet" type="text/css">
+  <link href="design/css/tablet.css" rel="stylesheet" type="text/css">
+  <link href="design/css/desktop.css" rel="stylesheet" type="text/css">
+
+  <script src="design/js/jquery-1.9.1.min.js"></script>
+  <script src="design/js/script.js"></script>
+  <script>
+    $(function () {
+      $("#nav").load("Section/nav.html");
+      $("#footer").load("Section/footer.html");
+    });
+  </script>
+</head>
+
+<body id="page_recommend">
+  <header id="nav"></header>
+  <main>
+    <h1>Get Recommendations</h1>
+    <div id="recommendation_box">
+      <label for="recommend_diet">Dietary Requirements:</label>
+      <select id="recommend_diet" name="recommend_diet">
+        <option value="">Select an Option</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="vegan">Vegan</option>
+        <option value="none">None</option>
+      </select>
+ 
+      <label for="min_budget">Minimum Budget:</label>
+      <input type="number" id="min_budget" placeholder="Minimum">
+
+      <label for="max_budget">Maximum Budget:</label>
+      <input type="number" id="max_budget" placeholder="Maximum">
+ 
+      <div class="checkbox-row">
+        <input type="checkbox" id="include_deposit">
+        <label for="include_deposit">Include Deposit in Budget</label>
+      </div>
+ 
+      <label for="recommend_occasion">Occasion:</label>
+      <select id="recommend_occasion" name="recommend_occasion">
+        <option value="">Select an Option</option>
+        <option value="casual">Casual</option>
+        <option value="sports">Sports Viewing</option>
+        <option value="family">Family Gathering</option>
+        <option value="none">None</option>
+      </select>
+ 
+      <div class="buttoninput">
+        <input type="submit" value="Submit" id="recommend_submit">
+      </div>
+ 
+      <div id="recommend_results"></div>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+</body>
+
+</html>

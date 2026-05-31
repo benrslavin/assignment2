@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Restaurants</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Restaurants Page">
+  <meta name="keywords" content="Restaurants, Food, Dining">
+  <meta name="author" content="Ben Slavin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="design/css/style.css" rel="stylesheet" type="text/css">
+  <link href="design/css/mobile.css" rel="stylesheet" type="text/css">
+  <link href="design/css/tablet.css" rel="stylesheet" type="text/css">
+  <link href="design/css/desktop.css" rel="stylesheet" type="text/css">
+
+  <script src="design/js/jquery-1.9.1.min.js"></script>
+  <script src="design/js/script.js"></script>
+  <script>
+    $(function () {
+      $("#nav").load("Section/nav.html");
+      $("#footer").load("Section/footer.html");
+    });
+  </script>
+</head>
+
+<body id="page_restaurants">
+
+  <header id="nav"></header>
+  <main>
+    <h1>Restaurants</h1>
+    <div id="restaurant_list"></div>
+  </main>
+
+
+  <footer id="footer"></footer>
+
+</body>
+</html>

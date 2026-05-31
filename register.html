@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Register Page">
+  <meta name="keywords" content="Register, Sign In">
+  <meta name="author" content="Ben Slavin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="design/css/style.css" rel="stylesheet" type="text/css">
+  <link href="design/css/mobile.css" rel="stylesheet" type="text/css">
+  <link href="design/css/tablet.css" rel="stylesheet" type="text/css">
+  <link href="design/css/desktop.css" rel="stylesheet" type="text/css">
+
+  <script src="design/js/jquery-1.9.1.min.js"></script>
+  <script src="design/js/script.js"></script>
+  <script>
+    $(function () {
+      $("#nav").load("Section/nav.html");
+      $("#footer").load("Section/footer.html");
+    });
+  </script>
+</head>
+
+<body id="page_register">
+  <header id="nav"></header>
+  <main>
+    <h1>Register</h1>
+    <form id="register_form" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+      <label for="register_username">Username:</label>
+      <input type="text" id="register_username" name="register_username">
+
+      <label for="register_email">Email Address:</label>
+      <input type="text" id="register_email" name="register_email">
+
+      <label for="register_phone">Phone Number:</label>
+      <input type="text" id="register_phone" name="register_phone">
+
+      <label for="register_password">Password:</label>
+      <input type="password" id="register_password" name="register_password">
+
+      <label for="register_confirm_password">Confirm Password:</label>
+      <input type="password" id="register_confirm_password" name="register_confirm_password">
+
+      <label for="register_gender">Gender:</label>
+      <select id="register_gender" name="register_gender">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="register_dietary">Dietary Requirements:</label>
+      <select id="register_dietary" name="register_dietary">
+        <option value="">Select Dietary Requirement</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="vegan">Vegan</option>
+        <option value="gluten-free">Gluten-Free</option>
+        <option value="dairy-free">Dairy-Free</option>
+      </select>
+
+      <label for="register_region">Preferred Region:</label>
+      <select id="register_region" name="register_region">
+        <option value="">Select Region</option>
+        <option value="register_cbd">CBD - Tudor Inn</option>
+        <option value="register_richmond">Richmond - The Lion</option>
+        <option value="register_south_yarra">South Yarra - The Yarra Hotel</option>
+        <option value="register_hawthorn">Hawthorn - Union Cove</option>
+        <option value="register_st_kilda">St Kilda - Royal Oak</option>
+        <option value="register_carlton">Carlton - The Carlton Beer Garden</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <footer id="footer"></footer>
+</body>
+</html>
